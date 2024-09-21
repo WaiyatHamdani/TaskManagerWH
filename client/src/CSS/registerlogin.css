@@ -1,0 +1,57 @@
+
+.registerlogin-container {
+    background: url('task-container.png') no-repeat center center;
+    background-size: contain;
+    
+    height: 700px; /* Adjusted to make space for additional fields */
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    font-size: 18px;
+}
+
+.registerlogin-form{
+    display: block;
+    padding: 20px;
+    margin: 15px;
+}
+
+
+h1 {
+    font-size: 48px;
+    color: gold;
+    text-shadow: 2px 2px 4px #000;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 40px;
+    line-height: 1.5;
+    color: #eee;
+}
+
+.registerlogin-form input {
+    display: block;
+    width: 20%;
+    margin: 10px auto;
+    padding: 10px;
+    border: 2px solid #555;
+    background-color: #444;
+    color: #fff;
+}
+
+.registerlogin-form button {
+    background-color: gold;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+    color: #000;
+}
+
+.registerlogin-form button:hover {
+    background-color: darkgoldenrod;
+}

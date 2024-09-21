@@ -1,0 +1,31 @@
+.navbar img{
+    width: 150px;
+    height: 80%;
+}
+.navbar {
+    display: flex;
+    background-color: #d5c7b1;
+    overflow: hidden;
+    color: white;
+    padding: 14px 14px;
+}
+.navbutton{
+  margin-left: 15px ;
+}
+
+.navbutton h5{
+  text-decoration: none;
+}
+
+.navbutton:hover {
+ background-color: #cddab0e0;
+ border-radius: 10%;
+ text-decoration: underline;
+}
+
+.navbar h3 {
+    
+    color: white;
+    text-decoration: double;
+    margin-right: 15px;
+}
