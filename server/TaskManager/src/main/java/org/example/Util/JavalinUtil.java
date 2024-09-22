@@ -1,6 +1,5 @@
 package org.example.Util;
 import io.javalin.Javalin;
-import org.example.Controller.UserController;
 import org.example.Controller.TaskController;
 
 public class JavalinUtil {
@@ -29,20 +28,14 @@ public class JavalinUtil {
 
     // Mapping routes
     private static void configureRoutes(Javalin app) {
-        UserController userController = new UserController();
         TaskController taskController = new TaskController();
-
-        // User Routes all in controller
-        app.post("/users/register", userController::registerUser);
-        app.post("/users/login", userController::loginUser);
-        app.get("/users/{id}", userController::getUserById);
 
         // Task Routes all in controller
         // the task mapping path will be here
         app.get("/tasks", taskController::getAllTasks);
-        app.get("/tasks/:id", taskController::getTaskById);
+        app.get("/tasks/{id}", taskController::getTaskById);
         app.post("/tasks", taskController::createTask);
-        app.put("/tasks/:id", taskController::updateTask);
-        app.delete("/tasks/:id", taskController::deleteTask);
+        app.put("/tasks/{id}", taskController::updateTask);
+        app.delete("/tasks/{id}", taskController::deleteTask);
     }
 }

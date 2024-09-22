@@ -1,0 +1,85 @@
+/* Home.css */
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.task-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+label {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  position: relative;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.card {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: all 600ms;
+}
+
+.card .front, .card .back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 200px;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.card .front {
+  background-color: #f1f1f1;
+  color: #222;
+  font-size: 24px;
+}
+
+.card .back {
+  background-color: #222;
+  color: #fff;
+  transform: rotateY(180deg);
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.back p{
+  font-size: small;
+  color: red;
+  position: absolute;
+}
+
+label:hover .card {
+  transform: rotateY(20deg);
+  box-shadow: 0 20px 20px rgba(50, 50, 50, 0.2);
+}
+
+input {
+  display: none;
+}
+
+input:checked + .card {
+  transform: rotateY(180deg);
+}
+
+label:hover input:checked + .card {
+  transform: rotateY(160deg);
+  box-shadow: 0 20px 20px rgba(255, 255, 255, 0.2);
+}
